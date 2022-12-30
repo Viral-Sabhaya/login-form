@@ -1,0 +1,177 @@
+* {
+   margin: 1px;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+}
+
+body {
+   background-color: #ccc;
+   
+}
+
+.loginBox {
+   max-width: 800px;
+   padding: 20px;
+   background-color: white;
+   margin: 0 auto;
+   margin-top: 30px;
+   box-shadow: 4px 3px 5px rgba(128, 123, 123, 0.5);
+   border-radius: 10px;
+   cursor: pointer;
+}
+
+label,select,img:hover{
+   cursor: pointer;
+}
+
+input {
+   border: 0;
+   outline: 0;
+   border-bottom: 1px solid black;
+   cursor: pointer;
+}
+
+input:focus{
+   border-bottom: 1px solid red;
+}
+
+.container {
+   max-width: 900px;
+   margin: 0 auto;
+}
+
+.form_container {
+   display: grid;
+   grid-template-columns: 350px 350px;
+   gap: 20px;
+   margin-top: 20px;
+}
+
+.form_control {
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+}
+
+.form_role {
+   grid-area: 1 / 1 / 2 / 3;
+}
+
+.form_world {
+   grid-area: 7 /1 / 8 / -1
+}
+
+.world {
+   gap: 20px;
+   margin-top: 20px;
+   display: grid;
+   grid-template-columns: auto auto 200px;
+}
+
+.form_gender {
+   gap: 20px;
+   margin-top: 20px;
+}
+
+.form_hobby {
+   gap: 20px;
+   margin-top: 20px;
+   grid-area: 5/1/6/-1;
+}
+
+.loginBox>h1 {
+   color: rgb(103, 99, 99);
+   margin: 10px 300px;
+}
+
+
+div[class*="pin"] {
+   grid-area: 6 /1 / 7 / 2;
+   margin-top: 20px;
+}
+
+.form_password {
+   grid-area: 8 /1 / 9 / -1;
+   margin-top: 20px;
+   display: flex;
+   justify-content: space-evenly;
+}
+
+.paw {
+   margin-right: 75px;
+}
+
+.from_button{
+   grid-area: 9 / 1 / 10 / -1;
+   margin-top: 20px;
+   display: flex;
+   
+}
+input[type="submit"]{
+   border: none;
+   margin-left: 220px;
+   padding: 10px 30px;
+   border-radius: 10px;
+   background-color: rgb(36, 36, 146);
+   color: white;
+   font-weight: 600;
+}
+input[type="reset"]{
+   border: none;
+   margin-left: 50px;
+   padding: 10px 30px;
+   border-radius: 10px;
+   background-color: rgb(252, 89, 30);
+   color: white;
+   font-weight: 600;
+
+}
+.from_register{
+   grid-area: 10 /1 /11 /-1;
+   margin-left: 220px;
+}
+
+input[type="file"]{
+   border: none;
+}
+
+.error {
+   color: red;
+   font-size: 90%;
+}
+
+#valid-name,#valid-uname,#valid-email,
+#valid-cpass,#valid-pass,#valid-cont,
+#valid-gender,#valid-hobby,#valid-image,
+#valid-pin,#valid-city,#valid-country,#valid-state{
+   color:red;
+   font-size: 13px;
+}
+
+#valid-uname,#valid-email,
+#valid-cont,#valid-image,
+#valid-pin{
+   margin-top:-30px;
+}
+
+p#valid-pass {
+   width: 277px;
+   height: 15px;
+}
+
+p#valid-cpass {
+   width: 277px;
+   height: 15px;
+}
+
+button{
+   border: none;
+   margin-left: 300px;
+   padding: 10px 30px;
+   border-radius: 10px;
+   background-color: rgb(36, 36, 146);
+   color: white;
+   font-weight: 600;
+}
+

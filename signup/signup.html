@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="style.css">
+   <title>SingUp</title>
+</head>
+
+<body>
+   <div class="container">
+      <div class="loginBox">
+         <h1 id="main_heading">SingUp</h1>
+         <form action="" id="my_form">
+            <div class="form_container">
+               <div class="form_role">
+                  <label for="role">Role</label>
+                  <select id="role">
+                     <option value="admin">Admin</option>
+                     <option value="user" selected>User</option>
+                  </select>
+               </div>
+               <div class="form_control">
+                  <label for="fname">Name</label>
+                  <input type="text" name="fname" id="firstName" placeholder="Enter Your Name"
+                     oninput="changeFname()">
+                  <p id="valid-name" class="valid-text"></p>
+
+               </div>
+               <div class="form_control">
+                  <label for="lname">Surname</label>
+                  <input type="text" name="lname" id="lastName" placeholder="Enter Your Surname"
+                     oninput="changeUname()"><br>
+                  <p id="valid-uname" class="valid-text"></p>
+
+               </div>
+               <div class="form_control">
+                  <label for="email">Email</label>
+                  <input type="text" name="mail" id="email" placeholder="Enter Your Email"
+                     oninput="changeEmail()"><br>
+                  <p id="valid-email" class="valid-text"></p>
+
+               </div>
+               <div class="form_control">
+                  <label for="phoneNumber">Phone Number</label>
+                  <input type="text" name="phoneNumber" id="phoneNumber" placeholder="Enter Your Number"
+                     oninput="changePhone()"><br>
+                  <p id="valid-cont" class="valid-cont"></p>
+
+               </div>
+               <div class="form_gender">
+                  <label for="gender">Gender: </label>
+                  <input type="radio" name="gender" value="male" id="male" 
+                  oninput="changeGender()">
+                  <label for="male">Male</label>
+                  <input type="radio" name="gender" value="female" id="female" 
+                  oninput="changeGender()">
+                  <label for="female">Female</label>
+                  <input type="radio" name="gender" value="other" id="other" 
+                  oninput="changeGender()">
+                  <label for="other">Other</label>
+                  <p id="valid-gender" class="valid-text"></p>
+
+               </div>
+               <div class="form_hobby">
+                  <label for="hobby">Hobby: </label>
+                  <input type="checkbox" class="messageCheckbox" name="hobby" value="sports" id="sport"
+                     oninput="checkboxChang()">
+                  <label for="sport">Sports</label>
+                  <input type="checkbox" class="messageCheckbox" name="hobby" value="music" id="music"
+                     oninput="checkboxChang()">
+                  <label for="music">Music</label>
+                  <input type="checkbox" class="messageCheckbox" name="hobby" value="reading" id="read"
+                     oninput="checkboxChang()">
+                  <label for="read">Reading</label>
+                  <p id="valid-hobby" class="valid-text"></p>
+
+               </div>
+               <div class="form_world">
+                  <div class="world">
+                     <div class="form_country">
+                        <label for="country">Country</label>
+                        <select id="country"
+                           onchange="configureDropDownLists(this,document.getElementById('countryState'))" oninput="changeCountry()">
+                           <option value="">Select Country</option>
+                           <option value="INDIA">INDIA</option>
+                           <option value="CANADA">CANADA</option>
+                           <option value="GERMANY">GERMANY</option>
+                        </select>
+                        <p id="valid-country" class="valid-text"></p>
+
+                     </div>
+                     <div class="form_country-state">
+                        <label for="country-state">State</label>
+                        <select id="countryState" 
+                        onchange="dropDone(this,document.getElementById('city'))" oninput="changeState()">
+                           <option id="optionState" value="">Select State</option>
+
+                           <!-- <option value="GUJARAT">GUJARAT</option>
+                           <option value="MUMBAI">MUMBAI</option>
+                           <option value="GOA">GOA</option>
+                           <option value="ALBERTA">ALBERTA</option>
+                           <option value="MANITOBA">MANITOBA</option>
+                           <option value="NUNAVUT">NUNAVUT</option>
+                           <option value="BAVARIA">BAVARIA</option>
+                           <option value="BREMEN">BREMEN</option>
+                           <option value="HAMBURG">HAMBURG</option> -->
+                           
+                        </select>
+                        <p id="valid-state" class="valid-text"></p>
+
+                     </div>
+                     <div class="form_city">
+                        <label for="city">City</label>
+                        <select id="city"oninput="changeCity()">
+                           <option  id="optionCity" value="">Select City</option>
+                           <!-- <option value="SURAT">SURAT</option>
+                           <option value="VADODRA">VADODRA</option>
+                           <option value="AHEMDABAD">AHEMDABAD</option>
+                           <option value="PUNE">PUNE</option>
+                           <option value="NAGPUR">NAGPUR</option>
+                           <option value="THANE">THANE</option>
+                           <option value="ARAMBOL">ARAMBOL</option>
+                           <option value="CANACONA">CANACONA</option>
+                           <option value="MARGAO">MARGAO</option>
+                           <option value="CALGARY">CALGARY</option>
+                           <option value="EDMONTON">EDMONTON</option>
+                           <option value="RED DEER">RED DEER</option>
+                           <option value="BRANDON">BRANDON</option>
+                           <option value="SELKIRK">SELKIRK</option>
+                           <option value="WINKLER">WINKLER</option>
+                           <option value="ALERT">ALERT</option>
+                           <option value="EUREKA">EUREKA</option>
+                           <option value="IQALUIT">IQALUIT</option>
+                           <option value="NUREMBERG">NUREMBERG</option>
+                           <option value="AUGSBURG">AUGSBURG</option>
+                           <option value="REGENSBURG">REGENSBURG</option>
+                           <option value="BLOMENDAL">BLOMENDAL</option>
+                           <option value="ARSTEN">ARSTEN</option>
+                           <option value="BREMENI">BREMENI</option>
+                           <option value="TRAVEMUENDE">TRAVEMUENDE</option>
+                           <option value="STADE">STADE</option>
+                           <option value="WISMAR">WISMAR</option> -->
+                        </select>
+                        <p id="valid-city" class="valid-text"></p>
+
+                     </div>
+                  </div>
+               </div>
+               <div class="form_control pin">
+                  <label for="pinCode">PinCode</label>
+                  <input type="text" name="pinCode" id="pinCode" placeholder="PinCode"
+                     oninput="changePin()"><br>
+                  <p id="valid-pin" class="valid-text"></p>
+
+               </div>
+               <div class="form_password">
+                  <div class="paw">
+                     <label for="password">Password</label>
+                     <input type="password" placeholder="Password" id="password" oninput="changePass()">
+                     <p id="valid-pass" class="valid-text"></p>
+                  </div>
+                  <div class="cofpaw">
+                     <label for="password">Confirm Password</label>
+                     <input type="password" placeholder="Confirm Password" id="confirm_password"
+                        oninput="changeCpass()">
+                     <p id="valid-cpass" class="valid-text"></p>
+                  </div>
+               </div>
+               <div class="form_control">
+                  <label for="image">Image</label>
+                  <!-- <img id="uploadPreview" style="width: 100px; height: 100px; margin-left:100px ;" /> -->
+                  <input type="file" name="image" id="image" oninput="changeImg()"><br>
+                  <p id="valid-image" class="valid-text"></p>
+
+               </div>
+               <div class="from_button">
+                  <input type="submit" name="submit" id="submit" value="Submit">
+                  <input type="reset" name="reset" id="reset" value="Reset">
+               </div>
+
+               <div class="from_register">
+                  <h3>Already Registered? <a href="../signin/signin.html">SignIn</a></h3>
+               </div>
+            </div>
+         </form>
+      </div>
+   </div>
+   <script src="../signup/signup.js"></script>
+</body>
+
+</html>

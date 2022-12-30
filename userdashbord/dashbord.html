@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../userdashbord/dash.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+   <title>Dashboard</title>
+</head>
+
+<body>
+   <div class="dashbord">
+      <h1>DASHBOARD</h1>
+      <div class="items-controller">
+         <div class="numbring">
+            <h5>Show</h5>
+            <select id="dropdown">
+               <option value="5" selected>5</option>
+               <option value="10" >10</option>
+               <option value="15">15</option>
+               <option value="20">20</option>
+            </select>
+            <h5>Entries</h5>
+         </div>
+         <input type="search" id="search" placeholder="Item to search.." />
+         <button id="btn">BACK</button>
+      </div>
+
+      <table id="catTable">
+
+         <thead>
+            <tr class="header">
+               <th>srNo</th>
+               <th data-sort="status">Status</th>
+               <th>Role</th>
+               <th data-sort="name">Name</th>
+               <th data-sort="surname">Surname</th>
+               <th data-sort="email">Email</th>
+               <th data-sort="phoneNumber">Contact</th>
+               <th data-sort="gender">Gender</th>
+               <th data-sort="country">Country</th>
+               <th data-sort="city">City</th>
+               <th data-sort="state">State</th>
+               <th data-sort="pinCode">Pincode</th>
+               <th data-sort="checkboxes">Hobby</th>
+            </tr>
+         </thead>
+
+         <tbody id="list"> </tbody>
+         
+      </table>
+
+      <div class="next" id="main_pagination">
+         <button id="prev" onclick="prevBtn()"> &#11164; </button>
+         <div id="pagination" ></div>
+         <button id="next" onclick="nextBtn()"> &#11166; </button>
+      </div>
+   </div>
+
+   <script src="../userdashbord/dashbord.js"></script>
+</body>
+
+</html>

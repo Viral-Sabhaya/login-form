@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="style1.css">
+   <title>SignIn</title>
+</head>
+
+<body>
+   <div class="container">
+      <div class="from_signin">
+         <div class="header">
+            <h1>SignIn</h1>
+         </div>
+         <div class="mail">
+            <label for="email">Email</label>
+            <input type="email" name="mail" id="email" placeholder="Enter Your Email" oninput="javascript:text()"><br>
+         </div>
+         <div class="password">
+            <label for="password">Password</label>
+            <input type="password" placeholder="Password" id="password" oninput="javascript:text()">
+         </div>
+            <p id="error"> </p>
+         <div class="btn">
+            <input type="submit" name="submit" id="submit" value="SignIn">
+         </div>
+         <div class="from_register">
+            <h3>New User? <a href="../signup/signup.html">SignUp</a></h3>
+         </div>
+      </div>
+   </div>
+
+   <script src="../signin/signin.js"></script>
+</body>
+
+</html>
