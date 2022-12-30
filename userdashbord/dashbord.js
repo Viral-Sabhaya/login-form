@@ -31,12 +31,6 @@ if (role === "admin") {
 
     <td> ${c[i].srNo}</td>
 
-    <td style='text-align:'> <input type='radio'  name='status${i}' onChange="act('${c[i].email}')" 
-    ${c[i].status ? "checked" : ""} > Active </input> 
-    <input type='radio' name='status${i}' onChange="dct('${c[i].email}')" 
-    ${c[i].status ? "" : "checked"}>Deactive </input> </td>
-
-    <td>${c[i].role}</td>
     <td>${c[i].name}</td>
     <td>${c[i].surname}</td>
     <td>${c[i].email}</td>
@@ -47,6 +41,11 @@ if (role === "admin") {
     <td>${c[i].state}</td>
     <td>${c[i].pinCode}</td>
     <td>${c[i].checkboxes}</td>
+
+    <td style='text-align:'> <input type='radio'  name='status${i}' onChange="act('${c[i].email}')" 
+    ${c[i].status ? "checked" : ""} > Active </input> 
+    <input type='radio' name='status${i}' onChange="dct('${c[i].email}')" 
+    ${c[i].status ? "" : "checked"}>Deactive </input> </td>
 
     <td><button class='edt_data' onClick="edt('${c[i].email}')"> Edit </button>
     <button class='clear_data' onClick="del('${c[i].email}')">Delete</button>
@@ -220,18 +219,27 @@ function sort(e) {
 
 // ---------------------------Searching Data-------------------------------
 
+
+//   document.getElementById("dropdown").setAttribute("disabled", "disabled");
+
 var newArray = [];
 
 document.getElementById("search").addEventListener("keyup", function () {
 
   var search = this.value.toLowerCase();
 
+  if (search == "") {
+    document.getElementById("dropdown").removeAttribute('disabled', 'disabled');
+  } else {
+    document.getElementById("dropdown").setAttribute('disabled', 'disabled');
+  }
+
   newArray = newData.filter(function (val) {
 
-    if ( val.name.includes(search) || val.surname.includes(search) || val.email.includes(search) ||
+    if (val.name.includes(search) || val.surname.includes(search) || val.email.includes(search) ||
       val.phoneNumber.includes(search) || val.pinCode.includes(search) || val.gender.includes(search) ||
       val.country.toLowerCase().includes(search) || val.city.toLowerCase().includes(search) ||
-      val.state.toLowerCase().includes(search) ) {
+      val.state.toLowerCase().includes(search)) {
 
       var newObj = {
         name: val.name,
@@ -243,12 +251,11 @@ document.getElementById("search").addEventListener("keyup", function () {
         country: val.country,
         city: val.city,
         state: val.state,
-        checkboxes:val.checkboxes
+        checkboxes: val.checkboxes
       }
       return newObj;
     }
   })
-
   renderTable(newArray, list_tr, pageTr, pageNo);
 })
 

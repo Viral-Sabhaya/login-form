@@ -1,4 +1,3 @@
-
 var data = new Array();
 data = JSON.parse(localStorage.getItem('users'));
 
@@ -23,23 +22,43 @@ imgDiv.addEventListener('mouseleave', function () {
 });
 
 
+function del(email) {
+
+   var dat = new Array();
+   dat = JSON.parse(localStorage.getItem("users"));
+
+   let result = confirm("are you sure!! you want to delete data");
+   if (result == true) {
+      result = dat.filter((item) => item.email !== email);
+      localStorage.setItem("users", JSON.stringify(result));
+      window.location.href="../signin/signin.html"
+   }
+}
+
+
 // ------------------------------------------------------------
 
 if (rol == "user") {
    profileData();
    let logout = document.getElementById("back");
    logout.value = "Logout";
+
+   document.getElementById("delete").addEventListener("click",function(){
+      del(email);
+   })
+
    logout.addEventListener("click", function (e) {
       e.preventDefault();
       localStorage.removeItem("loginuser");
       localStorage.removeItem("role");
-      window.location.href = "../signin/signin.html"
+      window.location.href = "../signin/signin.html";
    })
 
 } else if (rol == "admin") {
+   document.getElementById("delete").style.display = "none";
    mainData();
 } else {
-   window.location.href = "../signup/signup.html"
+   window.location.href = "../signup/signup.html";
 }
 // -------------------------------------------------------
 
@@ -100,6 +119,9 @@ function profileData() {
       window.location.href = "../signup/signup.html";
    });
 
+   document.querySelector(".main_btn").style.display="flex"
+   document.querySelector(".main_btn").style.justifyContent="space-around"
+
 }
 
 function mainData() {
@@ -158,6 +180,12 @@ function mainData() {
    document.getElementById("edit").addEventListener("click", function () {
       window.location.href = "../signup/signup.html";
    });
+
+   document.getElementById("edit").style.marginLeft="100px"
+   document.getElementById("edit").style.marginRight="20px"
+
+
+   
 }
 
 function back() { window.history.forward(); }

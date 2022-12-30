@@ -5,21 +5,21 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="../userdashbord/dash.css">
+   <link rel="stylesheet" href="../adminDashBoard/adminDash.css">
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-   <title>Dashboard</title>
+   <title>Admin Dashboard</title>
 </head>
 
 <body>
    <div class="dashbord">
       <h1>DASHBOARD</h1>
-      <h1>USER</h1>
+      <h1>ADMIN</h1>
       <div class="items-controller">
          <div class="numbring">
             <h5>Show</h5>
-            <select id="dropdown" >
+            <select id="dropdown">
                <option value="5" selected>5</option>
                <option value="10">10</option>
                <option value="15">15</option>
@@ -27,7 +27,7 @@
             </select>
             <h5>Entries</h5>
          </div>
-         <input type="text" id="search" placeholder="Item to search.."  />
+         <input type="search" id="search" placeholder="Item to search.." />
          <button id="btn">BACK</button>
       </div>
 
@@ -47,6 +47,7 @@
                <th data-sort="pinCode">Pincode</th>
                <th data-sort="checkboxes">Hobby</th>
                <th data-sort="status">Status</th>
+
             </tr>
          </thead>
 
@@ -61,7 +62,7 @@
       </div>
    </div>
 
-   <script src="../userdashbord/dashbord.js"></script>
+   <script src="../adminDashBoard/adminDash.js"></script>
 </body>
 
 </html>

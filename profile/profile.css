@@ -1,6 +1,4 @@
 * {
-   margin: 1px;
-   padding: 0;
    box-sizing: border-box;
    font-family: 'Poppins', sans-serif;
 }
@@ -17,6 +15,10 @@ body {
    margin-top: 30px;
    box-shadow: 4px 3px 5px rgba(128, 123, 123, 0.5);
    border-radius: 10px;
+}
+
+td{
+   padding: 5px;
 }
 
 
@@ -80,23 +82,17 @@ img {
 }
 
 .details {
-
    margin-top: -61px;
-
 }
-
 
 input {
    border: 0;
    outline: 0;
    border-bottom: 1px solid black;
-   margin-left: 20px;
-   margin-bottom: 15px;
    font-size: 17px;
    color: rgb(165, 42, 42);
    cursor: pointer;
    font-weight: bold;
-
 }
 
 input:focus {
@@ -107,14 +103,18 @@ label {
    margin-left: 30px;
    font-weight: bold;
    font-size: large;
+
 }
 
 .main_btn {
    display: flex;
+   margin-top: 15px;
 }
 
+
+
 #back,
-#edit {
+#edit,#delete {
    border: none;
    padding: 10px 30px;
    border-radius: 10px;
@@ -125,7 +125,7 @@ label {
 }
 
 #edit {
-   margin-left: 80px;
+   margin-left: 20px;
    background-color: rgb(36, 36, 146);
    padding: 10px 40px;
 
@@ -149,4 +149,8 @@ label {
 
 .fa-user {
    font-size: 20px;
+}
+
+#delete{
+   background-color: green;
 }

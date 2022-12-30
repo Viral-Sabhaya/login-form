@@ -25,8 +25,10 @@ document.getElementById("submit").addEventListener("click", function () {
       };
 
       if (user_records.some((v) => { return v.email == email && v.password == password && v.role == "user" && v.status == true })) {
-            let current_user = user_records.filter((v) => { return v.email == email && v.password == password && 
-                  v.role == "user" && v.status == true})[0]
+            let current_user = user_records.filter((v) => {
+                  return v.email == email && v.password == password &&
+                        v.role == "user" && v.status == true
+            })[0]
             localStorage.setItem('loginuser', current_user.email);
             localStorage.setItem('role', current_user.role);
             // localStorage.setItem("user2", JSON.stringify(user_records[i]));
@@ -34,29 +36,30 @@ document.getElementById("submit").addEventListener("click", function () {
       }
 
       else if (user_records.some((v) => { return v.email == email && v.password == password && v.role == "admin" })) {
-            let current_user = user_records.filter((v) => { return v.email == email && v.password == password && 
-                  v.role == "admin" })[0]
+            let current_user = user_records.filter((v) => {
+                  return v.email == email && v.password == password &&
+                        v.role == "admin"
+            })[0]
             localStorage.setItem('loginuser', current_user.email);
             localStorage.setItem('mainUser', current_user.email);
             localStorage.setItem('role', current_user.role);
             // localStorage.setItem("user2", JSON.stringify(user_records[i]));
             window.location.href = "../admin/admin.html"
-      }else if(user_records.some((v) => {return v.email == email && v.password == password && v.status != true})){
+      } else if (user_records.some((v) => { return v.email == email && v.password == password && v.status != true })) {
             document.querySelector("#error").innerHTML = "Sorry!!  Your Email Block by Admin";
       }
-      else if(user_records.some((v) => {return v.email == email && v.password != password})){
+      else if (user_records.some((v) => { return v.email == email && v.password != password })) {
             document.querySelector("#error").innerHTML = "Please Enter valid Password";
       }
-      else if(user_records.some((v) => {return v.email != email && v.password == password})){
+      else if (user_records.some((v) => { return v.email != email && v.password == password })) {
             document.querySelector("#error").innerHTML = "Please Enter Valid Email";
-      }
+      } 
       else {
             document.querySelector("#error").innerHTML = "Please Enter Email and Password";
       }
-      
 });
 
-function text(){
+function text() {
       document.querySelector("#error").innerHTML = " ";
 }
 

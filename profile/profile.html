@@ -5,6 +5,9 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="../profile/profile.css">
    <script src="https://kit.fontawesome.com/f90191c506.js" crossorigin="anonymous"></script>
    <title>Profile</title>
@@ -23,19 +26,52 @@
                <label for="file" id="uploadBtn">Choose Photo</label>
             </div>
             <div class="details">
+               <table>
+                  <tr>
+                     <td><label for="name">Name</label></td>
+                     <td><input type="text" id="name"></td>
+                  </tr>
+                  <tr>
+                     <td><label for="surname">Surname</label></td>
+                     <td><input type="text" id="surname"></td>
+                  </tr>
+                  <tr>
+                     <td><label for="email">Email</label></td>
+                     <td><input type="text" id="email"></td>
+                  </tr>
+                  <tr>
+                     <td> <label for="phoneNumber">PhoneNumber</label></td>
+                     <td><input type="text" id="phoneNumber"></td>
+                  </tr>
+                  <tr>
+                     <td><label for="country">Country</label></td>
+                     <td><input type="text" id="country"></td>
+                  </tr>
+                  <tr>
+                     <td><label for="State">State</label></td>
+                     <td><input type="text" id="state"></td>
+                  </tr>
+                  <tr>
+                     <td><label for="City">City</label></td>
+                     <td><input type="text" id="city"></td>
+                  </tr>
+                  <tr>
+                     <td><label for="pincode">Pincode</label></td>
+                     <td><input type="text" id="pincode"></td>
+                  </tr>
+                  <tr>
+                     <td><label for="gender">Gender</label></td>
+                     <td><input type="text" id="gender"></td>
+                  </tr>
+                  <tr>
+                     <td><label for="hobby">Hobby</label></td>
+                     <td><input type="text" id="hobby"></td>
+                  </tr>
+               </table>
 
-               <label for="name">Name</label><input type="text" id="name"><br>
-               <label for="surname">Surname</label><input type="text" id="surname"><br>
-               <label for="email">Email</label><input type="text" id="email"><br>
-               <label for="phoneNumber">PhoneNumber</label><input type="text" id="phoneNumber"><br>
-               <label for="country">Country</label><input type="text" id="country"><br>
-               <label for="State">State</label><input type="text" id="state"><br>
-               <label for="City">City</label><input type="text" id="city"><br>
-               <label for="pincode">Pincode</label><input type="text" id="pincode"><br>
-               <label for="gender">Gender</label><input type="text" id="gender"><br>
-               <label for="hobby">Hobby</label><input type="text" id="hobby"><br>
                <div class="main_btn">
                   <input type="button" name="edit" id="edit" value="Edit"><br>
+                  <input type="button" name="delete" id="delete" value="Delete"><br>
                   <input type="button" name="back" id="back" value="Back"><br>
                </div>
             </div>
@@ -44,9 +80,6 @@
       </div>
    </div>
    </div>
-
-
-
 
    <script src="../profile/profile.js"></script>
 </body>

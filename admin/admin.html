@@ -5,21 +5,35 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="../admin/admin.css">
    <title>Admin</title>
 </head>
 
 <body>
-   <div class="admin">
 
+   <div class="admin">
       <h1>ADMIN DASHBORD</h1>
-      <p id="paragraph"></p>
-      <div class="btn">
-         <button id="profile">MY PROFILE</button>
-         <button id="user_data">USERS</button>
-         <button id="exit">LOGOUT</button>
+
+      <div class="btnClass" style="display: flex;justify-content: space-around;">
+         <div class="btn">
+            <button id="profile">MY PROFILE</button>
+            <button id="admin">ADMIN</button>
+            <button id="user_data">USERS</button>
+         </div>
+         <div>
+            <button id="exit">LOGOUT</button>
+         </div>
       </div>
+
+      
+
+
    </div>
+
+
 
    <script src="../admin/admin.js"></script>
 

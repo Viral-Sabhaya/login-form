@@ -102,12 +102,9 @@ button {
    align-self: center;
 }
 
-.edt_data {
-   background-color: rgb(36, 36, 146);
-}
-
 .clear_data {
    background-color: crimson;
+   margin-left: 10px;
 }
 
 #btn {
@@ -128,7 +125,9 @@ button {
    content: "";
 }
 
-
+.header th:nth-child(3)::after {
+   content: "";
+}
 
 /*-------- pagination button------- */
 
@@ -149,18 +148,17 @@ select {
    margin-left: 5px;
 }
 
-#main_pagination{
+#main_pagination {
    display: flex;
    justify-content: center;
    align-content: center;
 }
 
-button{
+button {
    color: white;
    background: rgb(211, 39, 39);
 }
 
-.active{
+.active {
    background-color: rgb(115, 7, 7);
 }
-

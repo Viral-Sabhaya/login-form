@@ -11,6 +11,10 @@ if (role == "admin") {
       window.location.href = "../profile/profile.html"
    });
 
+   document.getElementById("admin").addEventListener("click", function () {
+      window.location.href = "../adminDashBoard/adminDash.html"
+   });
+
    document.getElementById("exit").addEventListener("click", function () {
       localStorage.removeItem("loginuser");
       localStorage.removeItem("mainUser");
