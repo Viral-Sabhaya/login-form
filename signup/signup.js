@@ -696,7 +696,7 @@ function btn_click() {
             // localStorage.removeItem("loginuser");
             // localStorage.setItem("loginuser", dat);
             localStorage.setItem("users", JSON.stringify(data_chang));
-            window.location.href = "../userdashbord/dashbord.html"
+            window.location.href = "../admin/admin.html"
          } else {
             localStorage.setItem("users", JSON.stringify(data_chang));
             window.location.href = "../profile/profile.html"
