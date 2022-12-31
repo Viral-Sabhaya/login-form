@@ -10,9 +10,9 @@ if (role == "admin") {
       User();
       this.style.backgroundColor = "rgb(115, 7, 7)";
       document.getElementById("admin").style.backgroundColor = "crimson";
-      document.getElementById("search").value="";
+      document.getElementById("search").value = "";
       document.getElementById("dropdown").removeAttribute('disabled', 'disabled');
-      document.getElementById("dropdown").value="5";
+      document.getElementById("dropdown").value = "5";
    });
 
    document.getElementById("profile").addEventListener("click", function () {
@@ -23,9 +23,9 @@ if (role == "admin") {
       Admin();
       this.style.backgroundColor = "rgb(115, 7, 7)";
       document.getElementById("user_data").style.backgroundColor = "crimson";
-      document.getElementById("search").value="";
+      document.getElementById("search").value = "";
       document.getElementById("dropdown").removeAttribute('disabled', 'disabled');
-      document.getElementById("dropdown").value="5";
+      document.getElementById("dropdown").value = "5";
 
 
 
@@ -75,12 +75,6 @@ function Admin() {
          let start_index = pageTr * pageNo;
          let end_index = start_index + pageTr;
          let c = newAdminData.slice(start_index, end_index);
-
-         if (c.length < 4) {
-            document.getElementById("main_pagination").style.display = "none"
-         } else {
-            document.getElementById("main_pagination").style.display = "flex"
-         }
 
          for (let i = 0; i < c.length; i++) {
 
@@ -141,7 +135,6 @@ function Admin() {
       let next = document.getElementById('next');
 
       btn.innerText = page;
-
 
       if (pageNo == 1) {
          prev.style.display = 'none';
@@ -284,15 +277,7 @@ function User() {
          pageNo--;
          let start_index = pageTr * pageNo;
          let end_index = start_index + pageTr;
-
          let c = newData.slice(start_index, end_index);
-
-         if (c.length < 4) {
-            document.getElementById("main_pagination").style.display = "none"
-         } 
-         else {
-            document.getElementById("main_pagination").style.display = "flex"
-         }
 
          for (let i = 0; i < c.length; i++) {
 
@@ -301,7 +286,6 @@ function User() {
             result.innerHTML = `<tr>
 
     <td> ${c[i].srNo}</td>
-
     <td>${c[i].name}</td>
     <td>${c[i].surname}</td>
     <td>${c[i].email}</td>
@@ -335,6 +319,7 @@ function User() {
             let btn = pagination_number(i, newData);
             pagination.appendChild(btn);
          }
+
          if (pagination.innerHTML === "") {
             document.getElementById('next').style.display = "none";
             document.getElementById('prev').style.display = "none";
@@ -356,7 +341,6 @@ function User() {
 
       if (pageNo == 1) {
          prev.style.display = 'none';
-
       } else {
          prev.style.display = 'block';
       }
